@@ -82,6 +82,31 @@ if ($_GET['run'] == 'c') {
 		request.send(data);
 		
 	}
+	document.onkeydown = checkKey;
+
+	function checkKey(e) {
+
+	    e = e || window.event;
+
+	    if (e.keyCode == '38') { //up
+	        window.location.href = 'picontrol.php?run=f';
+	    }
+	    else if (e.keyCode == '40') { //down
+	        window.location.href = 'picontrol.php?run=b';
+	    }
+	    else if (e.keyCode == '37') { //left
+	        window.location.href = 'picontrol.php?run=l';
+	    }
+	    else if (e.keyCode == '39') { //right
+	        window.location.href = 'picontrol.php?run=r';
+	    }
+	    else if (e.keyCode == '27') { //esc
+	        window.location.href = 'picontrol.php?run=s';
+	    }
+	    else if (e.keyCode == '32') { //space
+	        window.location.href = 'picontrol.php?run=s';
+	    }
+	}
 </script>
 <a href="picontrol.php?run=l"><img   src="btn_left.png"></a>
 <a href="picontrol.php?run=l"><img   src="btn_fwd.png"></a>
