@@ -19,6 +19,11 @@ void setup()
  
 void loop() 
 {
+	if ((digitalRead(left) == LOW) && (digitalRead(right) == LOW) && (pos != 100)) {
+		pos = 100;
+		myservo.write(pos)
+		delay(10);
+	}
 
 	if ((pos > 60) && (digitalRead(left) == HIGH)) {
 		for (pos = 100; pos >= 60; pos -= 1) {
@@ -36,5 +41,3 @@ void loop()
 
 	}
 }
-
-
