@@ -1,3 +1,30 @@
+<?php
+if ($_GET['run'] == 'f') {
+  # This code will run if ?run=true is set.
+  echo exec("touch /var/www/html/pibot/f");
+} 
+if ($_GET['run'] == 's') {
+  # This code will run if ?run=true is set.
+  echo exec("touch  /var/www/html/pibot/s");
+}
+if ($_GET['run'] == 'b') {
+  # This code will run if ?run=true is set.
+  echo exec("touch /var/www/html/pibot/b");
+}
+if ($_GET['run'] == 'l') {
+  # This code will run if ?run=true is set.
+  echo exec("touch /var/www/html/pibot/l");
+} 
+if ($_GET['run'] == 'r') {
+  # This code will run if ?run=true is set.
+  echo exec("touch /var/www/html/pibot/r");
+}
+if ($_GET['run'] == 'c') {
+  # This code will run if ?run=true is set.
+  echo exec("touch /var/www/html/pibot/c");
+}
+
+?>
 <html>
 <head>
 	<style>
