@@ -109,9 +109,9 @@ if ($_GET['run'] == 'c') {
 	}
 </script>
 <a href="picontrol.php?run=l"><img   src="btn_left.png"></a>
-<a href="picontrol.php?run=l"><img   src="btn_fwd.png"></a>
-<a href="picontrol.php?run=l"><img   src="btn_o.png"></a>
-<a href="picontrol.php?run=l"><img   src="btn_rev.png"></a>
-<a href="picontrol.php?run=l"><img   src="btn_right.png"></a>
+<a href="picontrol.php?run=f"><img   src="btn_fwd.png"></a>
+<a href="picontrol.php?run=s"><img   src="btn_o.png"></a>
+<a href="picontrol.php?run=b"><img   src="btn_rev.png"></a>
+<a href="picontrol.php?run=r"><img   src="btn_right.png"></a>
 </body>
 </html>
