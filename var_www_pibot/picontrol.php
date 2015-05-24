@@ -2,27 +2,34 @@
 if ($_GET['run'] == 'f') {
   # This code will run if ?run=true is set.
   echo exec("touch /var/www/html/pibot/f");
+  echo exec("beaglebot f");
 } 
 if ($_GET['run'] == 's') {
   # This code will run if ?run=true is set.
   echo exec("touch  /var/www/html/pibot/s");
+  echo exec("beaglebot s");
 }
 if ($_GET['run'] == 'b') {
   # This code will run if ?run=true is set.
   echo exec("touch /var/www/html/pibot/b");
+  echo exec("beaglebot b");
 }
 if ($_GET['run'] == 'l') {
   # This code will run if ?run=true is set.
   echo exec("touch /var/www/html/pibot/l");
+  echo exec("beaglebot l");
 } 
 if ($_GET['run'] == 'r') {
   # This code will run if ?run=true is set.
   echo exec("touch /var/www/html/pibot/r");
+  echo exec("beaglebot r");
 }
 if ($_GET['run'] == 'c') {
   # This code will run if ?run=true is set.
   echo exec("touch /var/www/html/pibot/c");
+  echo exec("beaglebot f");
 }
+
 
 ?>
 <html>
@@ -46,6 +53,7 @@ if ($_GET['run'] == 'c') {
 <body>
 
 <iframe height=480 width=640 src="http://127.0.0.1:8090/stream_simple.html"></iframe>
+<iframe height=480 width=640 src="./map.html"></iframe>
 <br>
 <script type="text/javascript">
 	function left() {
@@ -108,10 +116,12 @@ if ($_GET['run'] == 'c') {
 	    }
 	}
 </script>
+<p align="center">
 <a href="picontrol.php?run=l"><img   src="btn_left.png"></a>
 <a href="picontrol.php?run=f"><img   src="btn_fwd.png"></a>
 <a href="picontrol.php?run=s"><img   src="btn_o.png"></a>
 <a href="picontrol.php?run=b"><img   src="btn_rev.png"></a>
 <a href="picontrol.php?run=r"><img   src="btn_right.png"></a>
+</p>
 </body>
 </html>
