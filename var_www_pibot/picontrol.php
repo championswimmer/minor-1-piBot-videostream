@@ -1,33 +1,27 @@
 <?php
 if ($_GET['run'] == 'f') {
   # This code will run if ?run=true is set.
-  echo exec("touch /var/www/html/pibot/f");
-  echo exec("beaglebot f");
+  echo exec("echo f > /var/www/html/pibot/command");
 } 
 if ($_GET['run'] == 's') {
   # This code will run if ?run=true is set.
-  echo exec("touch  /var/www/html/pibot/s");
-  echo exec("beaglebot s");
+  echo exec("echo s > /var/www/html/pibot/command");
 }
 if ($_GET['run'] == 'b') {
   # This code will run if ?run=true is set.
-  echo exec("touch /var/www/html/pibot/b");
-  echo exec("beaglebot b");
+  echo exec("echo b > /var/www/html/pibot/command");
 }
 if ($_GET['run'] == 'l') {
   # This code will run if ?run=true is set.
-  echo exec("touch /var/www/html/pibot/l");
-  echo exec("beaglebot l");
+  echo exec("echo l > /var/www/html/pibot/command");
 } 
 if ($_GET['run'] == 'r') {
   # This code will run if ?run=true is set.
-  echo exec("touch /var/www/html/pibot/r");
-  echo exec("beaglebot r");
+  echo exec("echo r > /var/www/html/pibot/command");
 }
 if ($_GET['run'] == 'c') {
   # This code will run if ?run=true is set.
-  echo exec("touch /var/www/html/pibot/c");
-  echo exec("beaglebot f");
+  echo exec("echo s > /var/www/html/pibot/command");
 }
 
 
