@@ -8,11 +8,11 @@ fi
 
 # Define the pins
 
-RT_FWD=20
-RT_BWD=21
+export RT_FWD=20
+export RT_BWD=21
 
-LT_FWD=18
-LT_BWD=23
+export LT_FWD=18
+export LT_BWD=23
 
 echo ${RT_BWD} > /sys/class/gpio/export
 echo ${RT_FWD} > /sys/class/gpio/export
