@@ -39,9 +39,9 @@ stop() {
 opt="${1}"
 
 case ${opt} in
-	f) rt_fwd; lt_fwd;
+	f) rt_bwd; lt_bwd;
 	;;
-	b) rt_bwd; lt_bwd;
+	b) rt_fwd; lt_fwd;
 	;;
 	r) lt_fwd; rt_bwd;
 	;;
