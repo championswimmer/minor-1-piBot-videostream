@@ -1,3 +1,4 @@
+
 <html>
 <head>
 	<style>
@@ -18,7 +19,9 @@
 </head>
 <body>
 
-<iframe height=480 width=640 src="../stream_simple.html"></iframe>
+<!-- <iframe height=480 width=640 src="http://192.168.43.67:8090/stream_simple.html"></iframe> -->
+<img height=480 width=640  src="http://192.168.43.67:8090/?action=stream">/</img>
+<iframe height=480 width=640 src="./map.html"></iframe>
 <br>
 <script type="text/javascript">
 	function left() {
@@ -55,11 +58,62 @@
 		request.send(data);
 		
 	}
+	document.onkeydown = checkKey;
+
+	function checkKey(e) {
+
+	    e = e || window.event;
+
+	    if (e.keyCode == '38') { //up
+	        $.ajax({
+  				url: 'picontrol.php',
+  				type: 'GET',
+  				data: 'run=f'
+			}); 
+	    }
+	    else if (e.keyCode == '40') { //down
+	        $.ajax({
+  				url: 'picontrol.php',
+  				type: 'GET',
+  				data: 'run=b'
+			}); 
+	    }
+	    else if (e.keyCode == '37') { //left
+	        $.ajax({
+  				url: 'picontrol.php',
+  				type: 'GET',
+  				data: 'run=l'
+			}); 
+	    }
+	    else if (e.keyCode == '39') { //right
+	        $.ajax({
+  				url: 'picontrol.php',
+  				type: 'GET',
+  				data: 'run=r'
+			}); 
+	    }
+	    else if (e.keyCode == '27') { //esc
+	        $.ajax({
+  				url: 'picontrol.php',
+  				type: 'GET',
+  				data: 'run=s'
+			}); 
+	    }
+	    else if (e.keyCode == '32') { //space
+	        $.ajax({
+  				url: 'picontrol.php',
+  				type: 'GET',
+  				data: 'run=s'
+			}); 
+	    }
+	}
 </script>
+<p align="center">
 <a href="picontrol.php?run=l"><img   src="btn_left.png"></a>
-<a href="picontrol.php?run=l"><img   src="btn_fwd.png"></a>
-<a href="picontrol.php?run=l"><img   src="btn_o.png"></a>
-<a href="picontrol.php?run=l"><img   src="btn_rev.png"></a>
-<a href="picontrol.php?run=l"><img   src="btn_right.png"></a>
+<a href="picontrol.php?run=f"><img   src="btn_fwd.png"></a>
+<a href="picontrol.php?run=s"><img   src="btn_o.png"></a>
+<a href="picontrol.php?run=b"><img   src="btn_rev.png"></a>
+<a href="picontrol.php?run=r"><img   src="btn_right.png"></a>
+</p>
 </body>
 </html>
