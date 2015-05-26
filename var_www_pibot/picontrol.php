@@ -46,7 +46,8 @@ if ($_GET['run'] == 'c') {
 </head>
 <body>
 
-<iframe height=480 width=640 src="http://wi-pi-bot.com:8090/stream_simple.html"></iframe>
+<!-- <iframe height=480 width=640 src="http://192.168.43.67:8090/stream_simple.html"></iframe> -->
+<img height=480 width=640  src="http://192.168.43.67:8090/?action=stream">/</img>
 <iframe height=480 width=640 src="./map.html"></iframe>
 <br>
 <script type="text/javascript">
