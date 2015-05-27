@@ -1,0 +1,97 @@
+
+<html>
+<head>
+	<style>
+	html, body {
+	    height: 100%;
+	}
+
+	html {
+	    display: table;
+	    margin: auto;
+	}
+
+	body {
+	    display: table-cell;
+	    vertical-align: middle;
+	}
+	</style>
+</head>
+<body>
+
+<!-- <iframe height=480 width=640 src="http://192.168.43.67:8090/stream_simple.html"></iframe> -->
+<br>
+<script type="text/javascript">
+	function left() {
+		var request = new XMLHttpRequest();
+		request.open('GET', 'control.php?run=l', true);
+		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+		request.send();
+	}
+	function right() {
+		var request = new XMLHttpRequest();
+		request.open('GET', 'control.php?run=r', true);
+		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+		request.send();
+		
+	}
+	function rev() {
+		var request = new XMLHttpRequest();
+		request.open('GET', 'control.php?run=b', true);
+		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+		request.send();
+		
+	}
+	function fwd() {
+		var request = new XMLHttpRequest();
+		request.open('GET', 'control.php?run=f', true);
+		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+		request.send();
+		
+	}
+	function halt() {
+		var request = new XMLHttpRequest();
+		request.open('GET', 'control.php?run=s', true);
+		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+		request.send();
+		
+	}
+	document.onkeydown = checkKey;
+
+	function checkKey(e) {
+
+	    e = e || window.event;
+
+	    if (e.keyCode == '38') { //up
+	        fwd();
+	    }
+	    else if (e.keyCode == '40') { //down
+	        rev();
+	    }
+	    else if (e.keyCode == '37') { //left
+	        left();
+	    }
+	    else if (e.keyCode == '39') { //right
+	        right(); 
+	    }
+	    else if (e.keyCode == '27') { //esc
+	        halt();
+	    }
+	    else if (e.keyCode == '32') { //space
+	        halt(); 
+	    }
+	}
+</script>
+<p width=500 align="center">
+<img onclick="left()"  src="btn_left.png">
+<img onclick="fwd()"  src="btn_fwd.png">
+<img onclick="halt()"  src="btn_o.png">
+<img onclick="rev()"  src="btn_rev.png">
+<img onclick="right()"  src="btn_right.png">
+</p>
+<br>
+<img height=480 width=640  src="http://192.168.43.67:8090/?action=stream">/</img>
+<iframe height=480 width=640 src="./map.html"></iframe>
+
+</body>
+</html>
